@@ -24,3 +24,7 @@ Virtual Domain Name = localhost3.com
 Internet Protocol = 127.0.0.1
 
 ![alt tag](https://sc-cdn.scaleengine.net/i/68a940ec6ab8cfa818a46d8d843d8b32.png)
+
+
+This is under Development so many bugs.
+Also Dont forget to restart your Apache everytime you add Virtual Domains
