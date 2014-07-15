@@ -3,8 +3,8 @@ Xampp-Domain-Adder
 
 Xampp User Friendly Domain Adder
 
+Edit the config file to your own configuration.
 
-Simply edit the config file.
 
 class/config.php
 
