@@ -1,4 +1,5 @@
 <?php
-$output = shell_exec('cmd restartApache.bat');
+header('Content-Type: application/json');
+$output = system('restartApache.bat');
 echo "<pre>$output</pre>";
 ?>

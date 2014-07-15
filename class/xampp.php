@@ -51,12 +51,9 @@ class XamppDomainAdder
         $output    = shell_exec('' . $cmd . '');
         
         $myfile = fopen("restartApache.bat", "w") or die("Unable to open file!");
-        $txt = 'start /d "C:\xampp\apache\bin" httpd.exe -k restart';
+        $txt = 'net stop apache2.4 & net start apache2.4';
         fwrite($myfile, $txt);
-        fclose($myfile);
-        $output = shell_exec('restartApache.bat');
-        
-        
+        fclose($myfile);        
     }
     
     

@@ -1,1 +1,1 @@
-start /d "C:\xampp\apache\bin" httpd.exe -k restart
+net stop apache2.4 & net start apache2.4

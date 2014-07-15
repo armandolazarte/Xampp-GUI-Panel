@@ -15,5 +15,8 @@ $("#addhost").submit(function(){
 	 	}
 	 })
 
+	 apiUrl = '../../api/iframe.php';
+	 window.open(apiUrl);
+
 	event.preventDefault();
 });
