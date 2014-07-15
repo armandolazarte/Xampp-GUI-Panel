@@ -179,10 +179,10 @@
             <small>Add Domain Name</small>
           </h2>
           <div class="row">
-            <form action="login.htm" role="form">
+            <form id="addhost" role="form">
                 <div class="form-group">
                   <label class="sr-only" for="login-email">Virtual Domain Name</label>
-                  <input type="email" id="domain" class="form-control email" placeholder="Virtual Domain Name">
+                  <input type="text" id="domain" class="form-control" placeholder="Virtual Domain Name">
                 </div>
                 <div class="form-group">
                   <label class="sr-only" for="login-password">IP</label>
@@ -190,7 +190,7 @@
                 </div>
 
 
-                <button type="button" class="btn btn-primary">Add</button>
+                <button type="button submit" class="btn btn-primary">Add</button>
               </form>
           </div>
         </div>
@@ -375,6 +375,27 @@
         </div>
         <!-- /.modal-dialog -->
       </div>
+
+      <div class="modal fade" id="modal-info" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">
+                Info
+              </h4>
+            </div>
+            <div class="modal-body">
+                <p id="p-info"></p>
+            </div>
+            
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+
+
       <!-- /.modal -->
     </div>
     
@@ -384,6 +405,8 @@
     
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- ADD HOST -->
+    <script src="js/addhost/addhost.js"></script>
     
     
     <!-- JS plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 -->

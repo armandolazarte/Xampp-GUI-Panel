@@ -1,0 +1,1 @@
+start /d "C:\xampp\apache\bin" httpd.exe -k restart

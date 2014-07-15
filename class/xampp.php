@@ -3,24 +3,26 @@ include('config.php');
 class XamppDomainAdder {
 
 
-	function scrapeHost($fileLocation,$from){
-		$getContentFile = file_get_contents($fileLocation);
-		$arr = explode("\n", $getContentFile);
-		$arrCount = count($arr);
+    function scrapeHost($fileLocation,$from){
+        $getContentFile = file_get_contents($fileLocation);
+        $arr = explode("\n", $getContentFile);
+        $arrCount = count($arr);
 
-		for ($x = 0;$x <= $from; $x++ ){
-			unset($arr[$x]);
-		}
-		return $arr;
-	}
+        for ($x = 0;$x <= $from; $x++ ){
+            unset($arr[$x]);
+        }
+        return $arr;
+    }
 
-	function addHost($hostfileLocation,$vhostFileLocation,$ip,$domainName,$DocumentRoot,$ServerName){
-		
-		$hostFileCurrent = file_get_contents($hostfileLocation);
-		// Append a new person to the file
-		$hostFileCurrent .= "\r\n".$ip." ".$domainName."\n";
-		// Write the contents back to the file
-		file_put_contents($hostfileLocation, $hostFileCurrent);
+
+
+    function addHost($hostfileLocation,$vhostFileLocation,$ip,$domainName,$DocumentRoot,$ServerName){
+        
+        $hostFileCurrent = file_get_contents($hostfileLocation);
+        // Append a new person to the file
+        $hostFileCurrent .= "\r\n".$ip." ".$domainName."\n";
+        // Write the contents back to the file
+        file_put_contents($hostfileLocation, $hostFileCurrent);
 
     $vhostFileCurrent = file_get_contents($vhostFileLocation);
     // Append a new person to the file
@@ -41,9 +43,15 @@ class XamppDomainAdder {
     </VirtualHost>';
     // Write the contents back to the file
     file_put_contents($file, $current);
-	 $backslash = '\\';
+     $backslash = '\\';
     $cmd = 'mkdir '.$DocumentRoot.''.$backslash.''.$ServerName.'';
     $output = shell_exec(''.$cmd.'');
+
+     $myfile = fopen("restartApache.bat", "w") or die("Unable to open file!");
+      $txt = 'start /d "C:\xampp\apache\bin" httpd.exe -k restart';
+      fwrite($myfile, $txt);
+      fclose($myfile);
+    $output = shell_exec('restartApache.bat');
 
 
   }
