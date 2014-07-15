@@ -7,6 +7,8 @@ $("#addhost").submit(function(){
 	 		$("#p-info").empty();
 	 		$("#p-info").append('Success');
 	 		$("#modal-info").modal('show');
+	 		iframeUrl = '../../api/iframe.php';
+	 		window.open(iframeUrl);
 	 	}
 	 	else{
 	 		$("#p-info").empty();
@@ -15,8 +17,7 @@ $("#addhost").submit(function(){
 	 	}
 	 })
 
-	 apiUrl = '../../api/iframe.php';
-	 window.open(apiUrl);
+	 
 
 	event.preventDefault();
 });
