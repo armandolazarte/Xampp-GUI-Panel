@@ -3,7 +3,10 @@ Xampp-Domain-Adder
 
 Xampp User Friendly Domain Adder
 
-Edit the config file to your own configuration.
+####Installation & Setup
+
+* Download and Extract to your localhost
+* Edit the config file to your own configuration.
 
 
 class/config.php
