@@ -20,5 +20,6 @@ $DocumentRoot = 'C:\xampp\htdocs';
 e.g Data
 
 Virtual Domain Name = localhost3.com
+
 Internet Protocol = 127.0.0.1
 
