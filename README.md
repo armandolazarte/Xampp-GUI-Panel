@@ -1,4 +1,4 @@
-Xampp-Domain-Adder
+Xampp GUI Panel
 ==================
 
 Xampp User Friendly Domain Adder
